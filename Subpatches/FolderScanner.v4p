@@ -398,24 +398,6 @@
    </NODE>
    <LINK srcnodeid="26" srcpinname="Hits" dstnodeid="28" dstpinname="Input">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="29" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="840" top="11070" width="720" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="840" top="11070" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="IsPatch">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="28" srcpinname="Output" dstnodeid="29" dstpinname="Y Input Value">
-   </LINK>
    <NODE systemname="RelativePath (File)" nodename="RelativePath (File)" componentmode="Hidden" id="31">
    <BOUNDS type="Node" left="2820" top="8925" width="100" height="100">
    </BOUNDS>
@@ -590,6 +572,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <LINK srcnodeid="44" srcpinname="Output" dstnodeid="5" dstpinname="Input">
+   <LINK srcnodeid="44" srcpinname="Output" dstnodeid="5" dstpinname="Input" linkstyle="PolyLine">
    </LINK>
    </PATCH>
