@@ -319,6 +319,8 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Scale">
+   </PIN>
    </NODE>
    <NODE id="29" systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden">
    <BOUNDS type="Node" left="3915" top="16095" width="1935" height="270">

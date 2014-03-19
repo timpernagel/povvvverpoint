@@ -295,7 +295,7 @@
    </PIN>
    <PIN pinname="Mode" slicecount="1" visible="-1" pintype="Input" values="Clamp">
    </PIN>
-   <PIN pinname="Maximum" visible="1" pintype="Input" slicecount="1" values="9999">
+   <PIN pinname="Maximum" visible="1" pintype="Input" slicecount="1" values="132">
    </PIN>
    <PIN pinname="Reset" visible="1">
    </PIN>
@@ -722,8 +722,6 @@
    </NODE>
    <LINK srcnodeid="61" srcpinname="Input Value" dstnodeid="62" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="62" srcpinname="Output" dstnodeid="27" dstpinname="Maximum">
-   </LINK>
    <LINK srcnodeid="47" srcpinname="Output" dstnodeid="56" dstpinname="Switch">
    </LINK>
    <LINK srcnodeid="19" srcpinname="Output" dstnodeid="56" dstpinname="Input 1">
@@ -806,6 +804,10 @@
    </LINK>
    <LINK srcnodeid="18" srcpinname="Output" dstnodeid="71" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="71" srcpinname="Output" dstnodeid="27" dstpinname="Down">
+   <LINK srcnodeid="71" srcpinname="Output" dstnodeid="27" dstpinname="Down" linkstyle="Bezier">
+   <LINKPOINT x="8340" y="7973">
+   </LINKPOINT>
+   <LINKPOINT x="3030" y="7973">
+   </LINKPOINT>
    </LINK>
    </PATCH>

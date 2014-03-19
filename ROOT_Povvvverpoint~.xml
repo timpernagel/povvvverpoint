@@ -45,11 +45,11 @@
    </PIN>
    </NODE>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="128">
-   <BOUNDS type="Node" left="3195" top="11490" width="100" height="100">
+   <BOUNDS type="Node" left="3195" top="12090" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3195" top="11490" width="6000" height="4500">
+   <BOUNDS type="Box" left="3195" top="12090" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="16230" top="0" width="5370" height="4260">
+   <BOUNDS type="Window" left="16185" top="0" width="5415" height="4815">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -72,8 +72,6 @@
    <PIN pinname="Enabled" visible="-1" pintype="Input" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="130" srcpinname="Layer Out" dstnodeid="128" dstpinname="Layers">
-   </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="132">
    <BOUNDS type="Node" left="4560" top="1980" width="100" height="100">
    </BOUNDS>
@@ -296,6 +294,8 @@
    <PIN pinname="Acceleration" slicecount="1" values="30">
    </PIN>
    <PIN pinname="ChapterCount" visible="1">
+   </PIN>
+   <PIN pinname="Scale" slicecount="1" visible="1" values="2">
    </PIN>
    </NODE>
    <LINK srcnodeid="249" srcpinname="Input Value" dstnodeid="428" dstpinname="Reset" hiddenwhenlocked="1" linkstyle="PolyLine">
@@ -521,7 +521,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="10425" top="555" width="4575" height="2370">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|Known Bugs:&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;Next Features:&cr;&lf;&cr;&lf;- Aspect&cr;&lf;- Preload all Images o Startup|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Known Bugs:&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;Next Features:&cr;&lf;&cr;&lf;- Preload all Images o Startup|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -735,5 +735,99 @@
    <LINK srcnodeid="468" srcpinname="Y Output Value" dstnodeid="428" dstpinname="Acceleration">
    </LINK>
    <LINK srcnodeid="430" srcpinname="ChapterCount" dstnodeid="428" dstpinname="ChapterCount">
+   </LINK>
+   <NODE systemname="AspectRatio (DX11.Layer)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="AspectRatio (DX11.Layer)" componentmode="Hidden" id="469">
+   <BOUNDS type="Node" left="3360" top="11505" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer In" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="130" srcpinname="Layer Out" dstnodeid="469" dstpinname="Layer In">
+   </LINK>
+   <LINK srcnodeid="469" srcpinname="Layer Out" dstnodeid="128" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="473">
+   <BOUNDS type="Node" left="4170" top="13410" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="Vector (2D Split)" id="474" systemname="Vector (2d Split)">
+   <BOUNDS type="Node" left="4170" top="12525" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="128" srcpinname="Actual BackBuffer SizeXY" dstnodeid="474" dstpinname="XY">
+   </LINK>
+   <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="475">
+   <BOUNDS type="Node" left="4170" top="13020" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="474" srcpinname="X" dstnodeid="475" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="474" srcpinname="Y" dstnodeid="475" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="475" srcpinname="Output" dstnodeid="473" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="FrameDelay (Animation)" nodename="FrameDelay (Animation)" componentmode="Hidden" id="476">
+   <BOUNDS type="Node" left="3900" top="14370" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="LT (Value)" nodename="LT (Value)" componentmode="Hidden" id="477">
+   <BOUNDS type="Node" left="3825" top="13425" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="474" srcpinname="X" dstnodeid="477" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="474" srcpinname="Y" dstnodeid="477" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="478">
+   <BOUNDS type="Node" left="3915" top="13905" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="473" srcpinname="Output" dstnodeid="478" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="477" srcpinname="Output" dstnodeid="478" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="478" srcpinname="Output" dstnodeid="476" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="476" srcpinname="Output 1" dstnodeid="428" dstpinname="Scale" linkstyle="Bezier">
+   <LINKPOINT x="450" y="16110">
+   </LINKPOINT>
+   <LINKPOINT x="15" y="7050">
+   </LINKPOINT>
    </LINK>
    </PATCH>
