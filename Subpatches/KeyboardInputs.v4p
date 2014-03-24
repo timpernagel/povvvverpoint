@@ -27,7 +27,7 @@
    </PIN>
    </NODE>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="8505" top="4425" width="100" height="100">
+   <BOUNDS type="Node" left="8490" top="4905" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Send String" slicecount="1" values="ReScan">
    </PIN>
@@ -258,8 +258,6 @@
    </LINK>
    <LINK srcnodeid="3" srcpinname="Keyboard" dstnodeid="13" dstpinname="Keyboard">
    </LINK>
-   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="2" dstpinname="Input Value">
-   </LINK>
    <LINK srcnodeid="1" srcpinname="Bang" dstnodeid="16" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Simulate">
@@ -405,5 +403,19 @@
    <LINK srcnodeid="30" srcpinname="Output" dstnodeid="16" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="13" srcpinname="Space" dstnodeid="24" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="MonoFlop (Animation Framebased)" filename="%VVVV%\lib\nodes\modules\Animation\MonoFlop (Animation Framebased).v4p" nodename="MonoFlop (Animation Framebased)" componentmode="Hidden" id="31">
+   <BOUNDS type="Node" left="8505" top="4470" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Frames" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Set" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="31" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Output" dstnodeid="2" dstpinname="Input Value">
    </LINK>
    </PATCH>

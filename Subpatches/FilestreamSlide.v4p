@@ -103,7 +103,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3180" top="3570" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1" visible="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -439,7 +439,7 @@
    </BOUNDS>
    <PIN pinname="Set" visible="1">
    </PIN>
-   <PIN pinname="Frames" slicecount="1" values="1">
+   <PIN pinname="Frames" slicecount="1" values="2">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -699,7 +699,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2775" top="10290">
    </BOUNDS>
-   <PIN pinname="Do Seek" slicecount="1" values="0" visible="1">
+   <PIN pinname="Do Seek" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Seek Time" visible="1" slicecount="1" values="0">
    </PIN>
