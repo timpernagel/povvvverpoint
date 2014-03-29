@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta31.2.dtd" >
-   <PATCH nodename="C:\povvvverpoint\ROOT_Povvvverpoint.v4p" systemname="ROOT_Povvvverpoint" filename="C:\povvvverpoint\ROOT_Povvvverpoint.v4p">
+   <PATCH nodename="C:\povvvverpoint\ROOT_Povvvverpoint.v4p" systemname="ROOT_Povvvverpoint" filename="C:\povvvverpoint\ROOT_Povvvverpoint.v4p" bgcolor="15066597">
    <BOUNDS type="Window" left="0" top="0" width="16155" height="13050">
    </BOUNDS>
    <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="1">
@@ -44,16 +44,18 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="128">
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="128" border="0">
    <BOUNDS type="Node" left="5250" top="11805" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="5250" top="11805" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="16155" top="0" width="5445" height="3750">
+   <BOUNDS type="Window" left="33750" top="1695" width="18315" height="10815">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
    <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Actual BackBuffer SizeXY" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="130">
@@ -167,7 +169,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="11850" top="9075" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -177,7 +179,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Debug">
    </PIN>
@@ -445,7 +447,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="10995" top="660" width="4575" height="2370">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|Known Bugs:&cr;&lf;filestream sound bug &cr;&lf;&cr;&lf;&cr;&lf;Next Features:&cr;&lf;&cr;&lf;|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Known Bugs:&cr;&lf;filestream sound bug &cr;&lf;flash nach video&cr;&lf;chaper jump nach vorne und dann einzeln zurück&cr;&lf;&cr;&lf;&cr;&lf;Next Features:&cr;&lf;&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -613,9 +615,9 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
@@ -633,8 +635,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="130" srcpinname="Layer Out" dstnodeid="469" dstpinname="Layer In">
-   </LINK>
-   <LINK srcnodeid="469" srcpinname="Layer Out" dstnodeid="128" dstpinname="Layers">
    </LINK>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="473" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="6225" top="13125" width="100" height="100">
@@ -880,16 +880,52 @@
    </LINK>
    <LINK srcnodeid="428" srcpinname="Alpha" dstnodeid="490" dstpinname="Alpha">
    </LINK>
-   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="491">
-   <BOUNDS type="Node" left="12825" top="8925" width="100" height="100">
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="491" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="12645" top="7680" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="12825" top="8925" width="1800" height="1800">
+   <BOUNDS type="Box" left="12645" top="7680" width="1800" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="16290" top="9210" width="6240" height="5085">
+   <BOUNDS type="Window" left="0" top="13050" width="6240" height="4950">
    </BOUNDS>
    <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="430" srcpinname="Layer" dstnodeid="491" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="492">
+   <BOUNDS type="Node" left="7890" top="12555" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="493" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="8280" top="11940" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8280" top="11940" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="Res">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="devnul">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="493" srcpinname="Output String" dstnodeid="492" dstpinname="Send String">
+   </LINK>
+   <NODE systemname="FrameDelay (Animation)" nodename="FrameDelay (Animation)" componentmode="Hidden" id="494">
+   <BOUNDS type="Node" left="7890" top="11580" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="128" srcpinname="Actual BackBuffer SizeXY" dstnodeid="494" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="494" srcpinname="Output 1" dstnodeid="492" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="130" srcpinname="Layer Out" dstnodeid="128" dstpinname="Layers">
    </LINK>
    </PATCH>

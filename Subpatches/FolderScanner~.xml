@@ -646,16 +646,6 @@
    </LINK>
    <LINK srcnodeid="53" srcpinname="Output" dstnodeid="52" dstpinname="Filename">
    </LINK>
-   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InABox" id="58">
-   <BOUNDS type="Node" left="10230" top="15570" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="10230" top="15570" width="1800" height="1800">
-   </BOUNDS>
-   <BOUNDS type="Window" left="14310" top="9705" width="6240" height="5085">
-   </BOUNDS>
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Constant (DX11.Effect)" filename="%VVVV%\packs\DX11\nodes\dx11\Constant.fx" nodename="Constant (DX11.Effect)" componentmode="Hidden" id="59">
    <BOUNDS type="Node" left="10395" top="15105" width="100" height="100">
    </BOUNDS>
@@ -668,8 +658,6 @@
    <PIN pinname="Transform In" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="59" srcpinname="Layer" dstnodeid="58" dstpinname="Layers">
-   </LINK>
    <LINK srcnodeid="52" srcpinname="Texture Out" dstnodeid="59" dstpinname="Texture">
    </LINK>
    <NODE systemname="Grid (DX11.Geometry)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Grid (DX11.Geometry)" componentmode="Hidden" id="60">
@@ -713,7 +701,7 @@
    <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="63">
    <BOUNDS type="Node" left="10365" top="12600" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Spread Count" slicecount="1" values="6" visible="1">
+   <PIN pinname="Spread Count" slicecount="1" visible="1" values="6">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -799,5 +787,15 @@
    <LINK srcnodeid="68" srcpinname="Inverse Output" dstnodeid="69" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="69" srcpinname="Output" dstnodeid="63" dstpinname="Spread Count">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="71" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="10395" top="16140" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10395" top="16140" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="59" srcpinname="Layer" dstnodeid="71" dstpinname="Input Node">
    </LINK>
    </PATCH>

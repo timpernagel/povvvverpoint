@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta31.2.dtd" >
-   <PATCH nodename="C:\povvvverpoint\Subpatches\Transition.v4p" systemname="Transition" filename="C:\povvvverpoint\Subpatches\Transition.v4p">
+   <PATCH nodename="C:\povvvverpoint\Subpatches\Transition.v4p" systemname="Transition" filename="C:\povvvverpoint\Subpatches\Transition.v4p" bgcolor="15066597">
    <BOUNDS type="Window" left="750" top="0" width="14655" height="13680">
    </BOUNDS>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="0">
@@ -197,7 +197,7 @@
    <NODE id="27" systemname="Counter (Animation)" nodename="Counter (Animation)" componentmode="Hidden">
    <PIN pinname="Output" visible="1">
    </PIN>
-   <BOUNDS type="Node" left="1815" top="8940" width="3570" height="270">
+   <BOUNDS type="Node" left="1800" top="8940" width="3570" height="270">
    </BOUNDS>
    <PIN pinname="Down" visible="1">
    </PIN>
@@ -331,7 +331,7 @@
    <NODE systemname="Mod (Value)" nodename="Mod (Value)" componentmode="Hidden" id="43">
    <BOUNDS type="Node" left="9900" top="12930" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="6">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Input 2" slicecount="1" values="2">
    </PIN>
@@ -571,9 +571,9 @@
    <LINK srcnodeid="18" srcpinname="Output" dstnodeid="71" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="71" srcpinname="Output" dstnodeid="27" dstpinname="Down" linkstyle="Bezier">
-   <LINKPOINT x="8350" y="7973">
+   <LINKPOINT x="8345" y="7973">
    </LINKPOINT>
-   <LINKPOINT x="3050" y="7973">
+   <LINKPOINT x="3040" y="7973">
    </LINKPOINT>
    </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="72">
@@ -934,36 +934,12 @@
    </LINK>
    <LINK srcnodeid="112" srcpinname="Output" dstnodeid="108" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="S+H (Animation)" nodename="S+H (Animation)" componentmode="Hidden" id="131">
-   <BOUNDS type="Node" left="8100" top="8235" width="405" height="270">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Set" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="131" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="131" srcpinname="Output" dstnodeid="43" dstpinname="Input 1">
-   </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="132">
-   <BOUNDS type="Node" left="9150" top="7425" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="9150" top="7425" width="795" height="240">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Set">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="132" srcpinname="Y Output Value" dstnodeid="131" dstpinname="Set">
-   </LINK>
-   <LINK srcnodeid="131" srcpinname="Output" dstnodeid="17" dstpinname="Go To Position">
-   </LINK>
    <LINK srcnodeid="119" srcpinname="Input Value" dstnodeid="95" dstpinname="Reset">
    <LINKPOINT x="4785" y="12630">
    </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="17" dstpinname="Go To Position">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="43" dstpinname="Input 1">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta31.2.dtd" >
-   <PATCH nodename="C:\povvvverpoint\Subpatches\ChapterCycling.v4p" systemname="ChapterCycling" filename="C:\povvvverpoint\Subpatches\ChapterCycling.v4p">
+   <PATCH nodename="C:\povvvverpoint\Subpatches\ChapterCycling.v4p" systemname="ChapterCycling" filename="C:\povvvverpoint\Subpatches\ChapterCycling.v4p" bgcolor="15066597">
    <BOUNDS type="Window" left="0" top="0" width="16140" height="13050">
    </BOUNDS>
    <NODE id="0" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
