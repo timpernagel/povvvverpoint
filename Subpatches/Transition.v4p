@@ -721,7 +721,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Switch" visible="1">
+   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="109" srcpinname="Position Out" dstnodeid="112" dstpinname="Input 1">
@@ -749,10 +749,6 @@
    <LINK srcnodeid="114" srcpinname="Y Output Value" dstnodeid="109" dstpinname="FilterTime" linkstyle="PolyLine" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="16" srcpinname="Output" dstnodeid="79" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="79" srcpinname="Output" dstnodeid="29" dstpinname="TranslateX">
-   </LINK>
-   <LINK srcnodeid="95" srcpinname="Output" dstnodeid="112" dstpinname="Switch">
    </LINK>
    <LINK srcnodeid="95" srcpinname="Output" dstnodeid="79" dstpinname="Switch">
    </LINK>
@@ -1063,5 +1059,9 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="140" srcpinname="Y Output Value" dstnodeid="79" dstpinname="Input 1" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="95" srcpinname="Output" dstnodeid="112" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Output" dstnodeid="29" dstpinname="TranslateX">
    </LINK>
    </PATCH>

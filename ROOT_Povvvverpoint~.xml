@@ -11,7 +11,7 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="780" top="1485" width="1170" height="270">
+   <BOUNDS type="Box" left="780" top="1485" width="1710" height="240">
    </BOUNDS>
    <BOUNDS type="Node" left="780" top="1485" width="0" height="0">
    </BOUNDS>
@@ -44,12 +44,12 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="128" border="1">
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="Hidden" id="128" border="1">
    <BOUNDS type="Node" left="5775" top="7470" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="5775" top="7470" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="21810" top="6540" width="6990" height="5055">
+   <BOUNDS type="Window" left="21810" top="0" width="6990" height="5055">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -697,7 +697,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="5955" top="6390" width="7765" height="21025">
    </BOUNDS>
-   <BOUNDS type="Window" left="0" top="0" width="14715" height="13050">
+   <BOUNDS type="Window" left="8055" top="0" width="20745" height="18000">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
