@@ -994,7 +994,9 @@
    <BOUNDS type="Box" left="12375" top="18225">
    </BOUNDS>
    </NODE>
-   <NODE id="65" systemname="Root_SimulatorOnly" filename="..\..\Users\Johannes\Desktop\RESONATE\KAT\Root_SimulatorOnly.v4p" nodename="..\..\Users\Johannes\Desktop\RESONATE\KAT\Root_SimulatorOnly.v4p" componentmode="InAWindow" hiddenwhenlocked="0" managers="">
+   <LINK srcnodeid="224" srcpinname="Render State" dstnodeid="64" dstpinname="Render State">
+   </LINK>
+   <NODE id="65" systemname="PlaceholderPatch" filename="PlaceholderPatch.v4p" nodename="PlaceholderPatch.v4p" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Node" left="14160" top="18165" width="1155" height="270">
    </BOUNDS>
    <PIN pinname="TextureOut" visible="1" pintype="Output">
@@ -1015,11 +1017,11 @@
    </PIN>
    <PIN pinname="Patch" pintype="Output" visible="-1">
    </PIN>
+   <PIN pinname="Simulate">
+   </PIN>
    </NODE>
    <LINK srcnodeid="65" srcpinname="TextureOut" dstnodeid="64" dstpinname="Texture">
    </LINK>
    <LINK srcnodeid="220" srcpinname="Input Value" dstnodeid="65" dstpinname="ResolutionXY">
-   </LINK>
-   <LINK srcnodeid="224" srcpinname="Render State" dstnodeid="64" dstpinname="Render State">
    </LINK>
    </PATCH>

@@ -39,7 +39,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="180" top="2520" width="7650" height="7545">
    </BOUNDS>
-   <BOUNDS type="Window" left="3090" top="1785" width="13155" height="11265">
+   <BOUNDS type="Window" left="3090" top="1785" width="17790" height="14265">
    </BOUNDS>
    <PIN pinname="MouseOver" visible="1">
    </PIN>

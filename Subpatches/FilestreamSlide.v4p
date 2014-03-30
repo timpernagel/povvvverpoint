@@ -208,7 +208,7 @@
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="3090" top="1785" width="13155" height="11265">
+   <BOUNDS type="Window" left="3090" top="1785" width="17790" height="14265">
    </BOUNDS>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="30" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="5550" top="11025" width="795" height="480">
@@ -421,7 +421,7 @@
    </BOUNDS>
    <PIN pinname="Set" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Frames" slicecount="1" values="1">
+   <PIN pinname="Frames" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -430,8 +430,6 @@
    <PIN pinname="Reset" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="65" srcpinname="Output" dstnodeid="53" dstpinname="Input 2" hiddenwhenlocked="1">
-   </LINK>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="66">
    <BOUNDS type="Node" left="3180" top="4470" width="100" height="100">
    </BOUNDS>
@@ -547,12 +545,10 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Index" visible="1">
+   <PIN pinname="Index" visible="1" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="1" srcpinname="Output" dstnodeid="39" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="60" srcpinname="Output" dstnodeid="39" dstpinname="Index">
    </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="71">
    <BOUNDS type="Node" left="3030" top="2790" width="100" height="100">
@@ -701,6 +697,10 @@
    </PIN>
    <PIN pinname="Filename" visible="1">
    </PIN>
+   <PIN pinname="Play" visible="1">
+   </PIN>
+   <PIN pinname="Volume" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="84" srcpinname="Is Valid" dstnodeid="25" dstpinname="Y Input Value">
    </LINK>
@@ -713,8 +713,6 @@
    <LINK srcnodeid="11" srcpinname="Output 3" dstnodeid="84" dstpinname="Do Seek">
    </LINK>
    <LINK srcnodeid="84" srcpinname="Duration" dstnodeid="77" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="84" dstpinname="Play">
    </LINK>
    <LINK srcnodeid="84" srcpinname="Size" dstnodeid="32" dstpinname="Y Input Value">
    </LINK>
@@ -763,5 +761,63 @@
    <LINK srcnodeid="23" srcpinname="Y Output Value" dstnodeid="36" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="36" srcpinname="Output" dstnodeid="1" dstpinname="Set">
+   </LINK>
+   <NODE systemname="Delay (Animation)" nodename="Delay (Animation)" componentmode="Hidden" id="91">
+   <BOUNDS type="Node" left="2790" top="9570" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Time" slicecount="1" values="0.48">
+   </PIN>
+   </NODE>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="90">
+   <BOUNDS type="Node" left="9465" top="9690" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="FilterTime" slicecount="1" values="0.5">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="89">
+   <BOUNDS type="Node" left="3840" top="11580" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3840" top="11580" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="88">
+   <BOUNDS type="Node" left="9465" top="9195" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="88" srcpinname="Output" dstnodeid="90" dstpinname="Go To Position">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="91" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="91" srcpinname="Output" dstnodeid="84" dstpinname="Play">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="88" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="90" srcpinname="Position Out" dstnodeid="84" dstpinname="Volume">
+   </LINK>
+   <LINK srcnodeid="60" srcpinname="Output" dstnodeid="39" dstpinname="Index">
    </LINK>
    </PATCH>

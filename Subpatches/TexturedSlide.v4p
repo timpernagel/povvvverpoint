@@ -1017,6 +1017,8 @@
    </PIN>
    <PIN pinname="Patch" pintype="Output" visible="-1">
    </PIN>
+   <PIN pinname="Simulate">
+   </PIN>
    </NODE>
    <LINK srcnodeid="65" srcpinname="TextureOut" dstnodeid="64" dstpinname="Texture">
    </LINK>
