@@ -15,7 +15,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="780" top="1485" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="..\Users\Johannes\Desktop\RESONATE">
+   <PIN pinname="Input String" slicecount="1" values="..\Users\Johannes\Desktop\RES14">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -44,18 +44,20 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="Hidden" id="128" border="1">
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="128" border="1" stayontop="1">
    <BOUNDS type="Node" left="5775" top="7470" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="5775" top="7470" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="21810" top="0" width="6990" height="5055">
+   <BOUNDS type="Window" left="18555" top="3660" width="6645" height="5520">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
    <PIN pinname="Show Cursor" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Actual BackBuffer SizeXY" visible="1">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.77731,0.77731,0.77731,1.00000|">
    </PIN>
    </NODE>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="130">
@@ -359,9 +361,9 @@
    <NODE nodename="IOBox (String)" componentmode="InABox" id="453" systemname="IOBox (String)">
    <BOUNDS type="Node" left="10095" top="660" width="4515" height="690">
    </BOUNDS>
-   <BOUNDS type="Box" left="10095" top="660" width="2745" height="2640">
+   <BOUNDS type="Box" left="10095" top="660" width="2640" height="2490">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|Known Bugs:&cr;&lf;Chapter jump nach vorne und dann einzeln zurück&cr;&lf;&cr;&lf;&cr;&lf;Next Features:&cr;&lf;&cr;&lf;Hints:&cr;&lf;&cr;&lf;use FLV for Video|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Known Bugs:&cr;&lf;Chapter jump nach vorne und dann einzeln zurück&cr;&lf;&cr;&lf;preloading ist noch nicht ruckelfrei beim slide-wechsel&cr;&lf;&cr;&lf;movie glitch bei wagner|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -515,9 +517,9 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
@@ -531,7 +533,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4230" top="45" width="7455" height="13690">
    </BOUNDS>
-   <BOUNDS type="Window" left="750" top="0" width="14655" height="13680">
+   <BOUNDS type="Window" left="3105" top="1575" width="14655" height="13680">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -543,7 +545,7 @@
    </PIN>
    <PIN pinname="ChapterCount" visible="1">
    </PIN>
-   <PIN pinname="Scale" visible="1" slicecount="1" values="3.02013422818792">
+   <PIN pinname="Scale" visible="1" slicecount="1" values="1.84">
    </PIN>
    <PIN pinname="Alpha" visible="1">
    </PIN>
@@ -567,7 +569,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1080" top="4065" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -579,7 +581,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="481" srcpinname="Y Output Value" dstnodeid="448" dstpinname="Enabled">
@@ -692,7 +694,7 @@
    </LINK>
    <LINK srcnodeid="130" srcpinname="Layer Out" dstnodeid="128" dstpinname="Layers">
    </LINK>
-   <NODE systemname="TexturedSlide" filename="Subpatches\TexturedSlide.v4p" nodename="TexturedSlide" componentmode="Hidden" id="490">
+   <NODE systemname="TexturedSlide" filename="Subpatches\TexturedSlide.v4p" nodename="TexturedSlide" componentmode="Hidden" id="490" stayontop="0">
    <BOUNDS type="Node" left="5955" top="6390" width="1185" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="5955" top="6390" width="7765" height="21025">

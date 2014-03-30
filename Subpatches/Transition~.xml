@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta31.2.dtd" >
    <PATCH nodename="C:\povvvverpoint\Subpatches\Transition.v4p" systemname="Transition" filename="C:\povvvverpoint\Subpatches\Transition.v4p" bgcolor="15066597">
-   <BOUNDS type="Window" left="750" top="0" width="14655" height="13680">
+   <BOUNDS type="Window" left="9870" top="1005" width="14655" height="13680">
    </BOUNDS>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="8595" top="1425" width="100" height="100">
@@ -221,7 +221,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="885" top="13770" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="2" visible="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1.84">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -721,7 +721,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Switch" visible="1">
+   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="109" srcpinname="Position Out" dstnodeid="112" dstpinname="Input 1">
@@ -749,10 +749,6 @@
    <LINK srcnodeid="114" srcpinname="Y Output Value" dstnodeid="109" dstpinname="FilterTime" linkstyle="PolyLine" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="16" srcpinname="Output" dstnodeid="79" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="79" srcpinname="Output" dstnodeid="29" dstpinname="TranslateX">
-   </LINK>
-   <LINK srcnodeid="95" srcpinname="Output" dstnodeid="112" dstpinname="Switch">
    </LINK>
    <LINK srcnodeid="95" srcpinname="Output" dstnodeid="79" dstpinname="Switch">
    </LINK>
@@ -1034,8 +1030,6 @@
    </NODE>
    <LINK srcnodeid="138" srcpinname="Input Value" dstnodeid="136" dstpinname="XY">
    </LINK>
-   <LINK srcnodeid="132" srcpinname="Output" dstnodeid="28" dstpinname="Y Input Value" hiddenwhenlocked="0">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="139" systemname="IOBox (String)">
    <BOUNDS type="Node" left="885" top="11445" width="645" height="270">
    </BOUNDS>
@@ -1063,5 +1057,11 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="140" srcpinname="Y Output Value" dstnodeid="79" dstpinname="Input 1" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="95" srcpinname="Output" dstnodeid="112" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Output" dstnodeid="29" dstpinname="TranslateX">
+   </LINK>
+   <LINK srcnodeid="132" srcpinname="Output" dstnodeid="28" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

@@ -203,9 +203,9 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1440" top="600" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="17" srcpinname="Output String" dstnodeid="4" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="2" srcpinname="Hits" dstnodeid="4" dstpinname="Select">
    </LINK>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="1" dstpinname="Filename" linkstyle="Bezier">
@@ -213,8 +213,6 @@
    </LINKPOINT>
    <LINKPOINT x="5295" y="4498">
    </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="17" srcpinname="Output String" dstnodeid="2" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="3" srcpinname="Output String" dstnodeid="2" dstpinname="Filter">
    </LINK>
@@ -231,5 +229,9 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="5" srcpinname="Layer" dstnodeid="19" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Output String" dstnodeid="4" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Output String" dstnodeid="2" dstpinname="Input">
    </LINK>
    </PATCH>
